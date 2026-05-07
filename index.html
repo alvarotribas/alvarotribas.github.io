@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jane Doe — PhD Student, Telecommunications</title>
+  <meta name="description" content="Personal academic website of Jane Doe, PhD student in Electrical Engineering specialising in Telecommunications." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand" data-page="home" onclick="event.preventDefault();navigate('home')">Jane Doe</a>
+    <ul class="nav-links">
+      <li><a href="#home"         data-page="home">About</a></li>
+      <li><a href="#cv"           data-page="cv">CV</a></li>
+      <li><a href="#updates"      data-page="updates">Updates</a></li>
+      <li><a href="#publications" data-page="publications">Publications</a></li>
+      <li><a href="#other"        data-page="other">Other</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- HOME                                                         -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="page" id="home">
+<main>
+
+  <div class="profile-header">
+    <!-- Replace with: <img src="images/photo.jpg" alt="Jane Doe" class="profile-photo" /> -->
+    <div class="profile-photo-placeholder">👤</div>
+
+    <div class="profile-info">
+      <h1>Jane Doe</h1>
+      <p class="profile-title">
+        PhD Student · <strong>Electrical Engineering</strong><br>
+        University Name, City, Country
+      </p>
+      <div class="profile-links">
+        <a href="mailto:jane.doe@university.edu" class="profile-link">✉ Email</a>
+        <a href="https://scholar.google.com" class="profile-link" target="_blank">Scholar</a>
+        <a href="https://github.com/yourusername" class="profile-link" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourprofile" class="profile-link" target="_blank">LinkedIn</a>
+        <a href="https://orcid.org/0000-0000-0000-0000" class="profile-link" target="_blank">ORCID</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bio">
+    <h2 class="section-title">About Me</h2>
+    <hr class="section-rule" />
+    <p>
+      I am a first-year PhD student in the <a href="#">Department of Electrical Engineering</a>
+      at <a href="#">University Name</a>, advised by
+      <a href="#">Prof. Supervisor Name</a>.
+      My research sits at the intersection of <strong>wireless communications</strong> and
+      <strong>signal processing</strong>, with a focus on next-generation network architectures.
+    </p>
+    <p>
+      Prior to my PhD, I completed my MSc (or Bachelor's) in Electrical Engineering at
+      [Previous University], where I worked on [brief previous research or thesis topic].
+      I am broadly interested in making wireless systems faster, more reliable, and more
+      energy-efficient.
+    </p>
+    <p>
+      I am currently looking for collaborations and open to discussing research ideas.
+      Feel free to reach out!
+    </p>
+  </div>
+
+  <div style="margin-top:2rem;">
+    <h3 style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;">Research Interests</h3>
+    <div class="interests-grid">
+      <span class="interest-tag">📡 6G &amp; Beyond Wireless Networks</span>
+      <span class="interest-tag">🔀 MIMO &amp; Massive Antenna Systems</span>
+      <span class="interest-tag">📶 Channel Estimation &amp; Coding</span>
+      <span class="interest-tag">🤖 ML for Communications</span>
+      <span class="interest-tag">⚡ Energy-Efficient Protocols</span>
+      <span class="interest-tag">🔐 Physical Layer Security</span>
+    </div>
+  </div>
+
+</main>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- CV                                                           -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="page" id="cv">
+<main>
+
+  <h2 class="section-title">Curriculum Vitae</h2>
+  <hr class="section-rule" />
+
+  <div class="cv-download-bar">
+    <span>Full CV available as PDF</span>
+    <a href="files/cv.pdf" class="btn" download>⬇ Download PDF</a>
+  </div>
+
+  <!-- Education -->
+  <div class="cv-block">
+    <div class="cv-block-title">Education</div>
+
+    <div class="cv-entry">
+      <span class="cv-year">2024 – present</span>
+      <div class="cv-entry-body">
+        <h4>PhD in Electrical Engineering</h4>
+        <div class="cv-org">University Name, City, Country</div>
+        <p>Advisor: Prof. Supervisor Name · Lab: Wireless Communications Lab</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <span class="cv-year">2022 – 2024</span>
+      <div class="cv-entry-body">
+        <h4>MSc in Electrical Engineering</h4>
+        <div class="cv-org">University Name, City, Country</div>
+        <p>Thesis: "Title of Your Master's Thesis" · GPA: X.X / 4.0</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <span class="cv-year">2018 – 2022</span>
+      <div class="cv-entry-body">
+        <h4>BSc in Electrical Engineering</h4>
+        <div class="cv-org">University Name, City, Country</div>
+        <p>Graduated with honours · GPA: X.X / 4.0</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Research Experience -->
+  <div class="cv-block">
+    <div class="cv-block-title">Research Experience</div>
+
+    <div class="cv-entry">
+      <span class="cv-year">2024 – present</span>
+      <div class="cv-entry-body">
+        <h4>Graduate Research Assistant</h4>
+        <div class="cv-org">Wireless Communications Lab, University Name</div>
+        <p>Brief description of current research activities and contributions.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <span class="cv-year">Summer 2023</span>
+      <div class="cv-entry-body">
+        <h4>Research Intern</h4>
+        <div class="cv-org">Company or Institution Name</div>
+        <p>Brief description of internship project and outcomes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teaching -->
+  <div class="cv-block">
+    <div class="cv-block-title">Teaching</div>
+    <div class="cv-entry">
+      <span class="cv-year">Fall 2024</span>
+      <div class="cv-entry-body">
+        <h4>Teaching Assistant — EE 301: Digital Communications</h4>
+        <div class="cv-org">University Name</div>
+        <p>Led weekly recitation sections; held office hours; graded assignments.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Honours & Awards -->
+  <div class="cv-block">
+    <div class="cv-block-title">Honours &amp; Awards</div>
+    <div class="cv-entry">
+      <span class="cv-year">2024</span>
+      <div class="cv-entry-body">
+        <h4>Name of Fellowship / Scholarship</h4>
+        <div class="cv-org">Awarding Body</div>
+      </div>
+    </div>
+    <div class="cv-entry">
+      <span class="cv-year">2022</span>
+      <div class="cv-entry-body">
+        <h4>Best Thesis Award</h4>
+        <div class="cv-org">Department of Electrical Engineering, University Name</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="cv-block">
+    <div class="cv-block-title">Technical Skills</div>
+    <div class="cv-entry">
+      <span class="cv-year">Languages</span>
+      <div class="cv-entry-body">
+        <p>Python, MATLAB, C/C++, LaTeX</p>
+      </div>
+    </div>
+    <div class="cv-entry">
+      <span class="cv-year">Tools</span>
+      <div class="cv-entry-body">
+        <p>PyTorch, NumPy, GNU Radio, USRP SDR platforms, Git</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- UPDATES                                                      -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="page" id="updates">
+<main>
+
+  <h2 class="section-title">Updates</h2>
+  <hr class="section-rule" />
+
+  <ul class="update-list">
+
+    <li class="update-item">
+      <span class="update-date">Apr 2025</span>
+      <span class="update-text">
+        <span class="update-badge badge-paper">Paper</span>
+        New preprint available on arXiv: <a href="#">"Title of Your Paper"</a>.
+      </span>
+    </li>
+
+    <li class="update-item">
+      <span class="update-date">Mar 2025</span>
+      <span class="update-text">
+        <span class="update-badge badge-talk">Talk</span>
+        Presented our work on [topic] at the <a href="#">Conference Name 2025</a> in City, Country.
+      </span>
+    </li>
+
+    <li class="update-item">
+      <span class="update-date">Jan 2025</span>
+      <span class="update-text">
+        <span class="update-badge badge-award">Award</span>
+        Received the [Award Name] from [Organisation]. Honoured to be recognised!
+      </span>
+    </li>
+
+    <li class="update-item">
+      <span class="update-date">Sep 2024</span>
+      <span class="update-text">
+        <span class="update-badge badge-news">News</span>
+        Started my PhD at University Name under the supervision of Prof. Supervisor Name. Excited for the journey ahead!
+      </span>
+    </li>
+
+    <li class="update-item">
+      <span class="update-date">Jul 2024</span>
+      <span class="update-text">
+        <span class="update-badge badge-travel">Travel</span>
+        Attended the <a href="#">IEEE ICC 2024</a> workshop in Denver, CO, USA.
+      </span>
+    </li>
+
+  </ul>
+
+</main>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- PUBLICATIONS                                                 -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="page" id="publications">
+<main>
+
+  <h2 class="section-title">Publications</h2>
+  <hr class="section-rule" />
+
+  <div class="pub-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="journal">Journals</button>
+    <button class="filter-btn" data-filter="conference">Conferences</button>
+    <button class="filter-btn" data-filter="preprint">Preprints</button>
+  </div>
+
+  <ul class="pub-list">
+
+    <li class="pub-item" data-type="preprint">
+      <div class="pub-title">Title of Your Most Recent Preprint or Submitted Paper</div>
+      <div class="pub-authors"><strong>J. Doe</strong>, A. Coauthor, B. Coauthor, and Prof. Supervisor</div>
+      <div class="pub-venue">arXiv preprint arXiv:XXXX.XXXXX, 2025</div>
+      <div class="pub-links">
+        <a href="#" class="pub-link">arXiv</a>
+        <a href="#" class="pub-link">PDF</a>
+        <a href="#" class="pub-link">Code</a>
+      </div>
+    </li>
+
+    <li class="pub-item" data-type="conference">
+      <div class="pub-title">Title of Your Conference Paper</div>
+      <div class="pub-authors"><strong>J. Doe</strong>, A. Coauthor, and Prof. Supervisor</div>
+      <div class="pub-venue">Proc. IEEE International Conference on Communications (ICC), Denver, CO, 2024</div>
+      <div class="pub-links">
+        <a href="#" class="pub-link">IEEE</a>
+        <a href="#" class="pub-link">PDF</a>
+        <a href="#" class="pub-link">Slides</a>
+      </div>
+    </li>
+
+    <li class="pub-item" data-type="journal">
+      <div class="pub-title">Title of a Journal Article (e.g. from your Master's)</div>
+      <div class="pub-authors"><strong>J. Doe</strong>, A. Coauthor, and B. Coauthor</div>
+      <div class="pub-venue">IEEE Transactions on Communications, vol. XX, no. X, pp. XX–XX, 2023</div>
+      <div class="pub-links">
+        <a href="#" class="pub-link">IEEE</a>
+        <a href="#" class="pub-link">PDF</a>
+      </div>
+    </li>
+
+  </ul>
+
+</main>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- OTHER                                                        -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="page" id="other">
+<main>
+
+  <h2 class="section-title">Other</h2>
+  <hr class="section-rule" />
+
+  <div class="other-grid">
+
+    <div class="other-card">
+      <h3>📚 Reading &amp; Resources</h3>
+      <p>A collection of papers, books, and links I have found useful for my research in wireless communications and signal processing.</p>
+      <!-- Link to a separate page or a list -->
+    </div>
+
+    <div class="other-card">
+      <h3>🎓 Academic Service</h3>
+      <p>Reviewer for IEEE Transactions on Wireless Communications, IEEE Communications Letters. Member of IEEE and IEEE ComSoc.</p>
+    </div>
+
+    <div class="other-card">
+      <h3>🌍 Outreach &amp; Mentoring</h3>
+      <p>I enjoy mentoring undergraduate students and participating in science outreach events. Reach out if you'd like to chat about research or grad school applications.</p>
+    </div>
+
+    <div class="other-card">
+      <h3>💡 Side Projects</h3>
+      <p>Outside of my main research, I tinker with software-defined radio (SDR) and enjoy building small embedded systems for hobby projects.</p>
+    </div>
+
+    <div class="other-card">
+      <h3>🏔️ Outside the Lab</h3>
+      <p>When I'm not in the lab, I enjoy hiking, photography, and playing chess. I'm always happy to discuss research over coffee!</p>
+    </div>
+
+  </div>
+
+</main>
+</div>
+
+<!-- ── Footer ───────────────────────────────────────────────── -->
+<footer>
+  <p>© <span id="year"></span> Jane Doe · Built with plain HTML &amp; CSS · Hosted on GitHub Pages</p>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
