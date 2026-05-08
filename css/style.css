@@ -131,11 +131,11 @@ main {
   gap: 1.5rem;
 }
 .hero-photo {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 60%;
   object-fit: cover;
-  border: 4px solid #fff;
+  border: 4px solid #1d4ed8;
   box-shadow: 0 2px 16px rgba(0,0,0,0.10);
 }
 .hero-photo-placeholder {
@@ -367,8 +367,10 @@ main {
 
 .pub-list { list-style: none; }
 .pub-item {
-  padding: 1.25rem 0;
+  padding: 1.25rem 0 1.25rem 1.25rem;
   border-bottom: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  margin: 0.7rem 0;
 }
 .pub-item:last-child { border-bottom: none; }
 .pub-title {
@@ -407,6 +409,28 @@ main {
   color: var(--accent);
   background: var(--accent-lt);
   text-decoration: none;
+}
+
+/* ── Publication TL;DR ────────────────────────────────────────── */
+.pub-tldr {
+  margin-top: 0.65rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.pub-tldr-label {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-lt);
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  margin-right: 0.4rem;
+  vertical-align: middle;
 }
 
 /* ── OTHER ────────────────────────────────────────────────────── */
@@ -453,4 +477,48 @@ footer {
   .hero-divider { margin: 1.25rem auto; }
   .hero-interests { justify-content: center; }
   .nav-links a { padding: 0.3rem 0.45rem; font-size: 0.73rem; }
+}
+
+.other-card { cursor: pointer; }
+
+.other-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.other-card-summary {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+.other-card-arrow {
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: transform 0.25s;
+}
+
+.other-card.open .other-card-arrow {
+  transform: rotate(90deg);
+}
+
+.other-card-body {
+  display: none;
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
+.other-card-body ul {
+  margin-top: 0.5rem;
+  padding-left: 1.1rem;
+}
+
+.other-card-body li { margin-bottom: 0.3rem; }
+
+.other-card.open .other-card-body {
+  display: block;
 }

@@ -34,3 +34,8 @@ filterBtns.forEach(btn => {
     });
   });
 });
+
+// ── Other cards (accordion) ───────────────────────────────────
+function toggleCard(card) {
+  card.classList.toggle('open');
+}

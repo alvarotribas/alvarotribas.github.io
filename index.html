@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jane Doe — PhD Student, Telecommunications</title>
-  <meta name="description" content="Personal academic website of Jane Doe, PhD student in Electrical Engineering specialising in Telecommunications." />
+  <title>Álvaro Ribas' Website</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231d4ed8'/><text x='50' y='72' font-size='62' font-family='serif' font-weight='bold' text-anchor='middle' fill='white'>A</text></svg>">
+  <meta name="description" content="Personal academic website of Álvaro Ribas, PhD student in Electrical Engineering specialising in Telecommunications." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +19,7 @@
 <!-- ── Navigation ──────────────────────────────────────────────── -->
 <nav>
   <div class="nav-inner">
-    <a href="#home" class="nav-brand" data-page="home" onclick="event.preventDefault();navigate('home')">Jane Doe</a>
+    <a href="#home" class="nav-brand" data-page="home" onclick="event.preventDefault();navigate('home')">Álvaro T. Ribas</a>
     <ul class="nav-links">
       <li><a href="#home"         data-page="home">About</a></li>
       <li><a href="#cv"           data-page="cv">CV</a></li>
@@ -39,11 +40,10 @@
 
       <!-- LEFT: photo + links -->
       <aside class="hero-aside">
-        <!-- Replace with: <img src="images/photo.jpg" alt="Jane Doe" class="hero-photo" /> -->
-        <div class="hero-photo-placeholder">JD</div>
+        <img src="images/photo.png" class="hero-photo" />
 
         <div class="hero-links">
-          <a href="mailto:jane.doe@university.edu" class="hero-link">
+          <a href="mailto:alvarotribas@gmail.com" class="hero-link">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             Email
           </a>
@@ -51,55 +51,49 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"/></svg>
             Google Scholar
           </a>
-          <a href="https://github.com/yourusername" class="hero-link" target="_blank">
+          <a href="https://github.com/alvarotribas" class="hero-link" target="_blank">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
             GitHub
           </a>
-          <a href="https://linkedin.com/in/yourprofile" class="hero-link" target="_blank">
+          <a href="https://linkedin.com/in/alvarotribas" class="hero-link" target="_blank">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
             LinkedIn
-          </a>
-          <a href="https://orcid.org/0000-0000-0000-0000" class="hero-link" target="_blank">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>
-            ORCID
           </a>
         </div>
       </aside>
 
       <!-- RIGHT: name + bio -->
       <div class="hero-body">
-        <h1 class="hero-name">Jane Doe</h1>
-        <p class="hero-role">PhD Student in Electrical Engineering</p>
-        <p class="hero-affiliation">University Name · City, Country</p>
-        <p class="hero-advisor">Advisor: <a href="#">Prof. Supervisor Name</a></p>
+        <h1 class="hero-name">Álvaro Ribas</h1>
+        <p class="hero-role">MSc Student in Electrical Engineering</p>
+        <p class="hero-affiliation">Institut Polytechnique de Paris</a></p>
 
         <div class="hero-divider"></div>
 
         <p class="hero-bio">
-          I am a first-year PhD student in the <a href="#">Department of Electrical Engineering</a>
-          at <a href="#">University Name</a>, advised by
-          <a href="#">Prof. Supervisor Name</a>.
-          My research sits at the intersection of <strong>wireless communications</strong> and
-          <strong>signal processing</strong>, with a focus on next-generation network architectures.
+          I am a last-year MSc student in Electrical Engineering in the 
+          <a href="https://www.telecom-paris.fr/fr/recherche/labos/traitement-information-ltci">Laboratoire Traitment et Communication de l'Information (LTCI)</a>
+          at <a href="https://www.ip-paris.fr/">Télécom Paris, Institut Polytechnique de Paris</a>, advised by
+          <a href="https://perso.telecom-paristech.fr/shwang/">Prof. Shanshan Wang</a>.
+          My main research lies at the intersection of <strong>wireless communications</strong>, 
+          <strong>stochastic geometry</strong> and <strong>machine learning</strong>. 
         </p>
         <p class="hero-bio">
-          Prior to my PhD, I completed my MSc (or Bachelor's) in Electrical Engineering at
-          [Previous University], where I worked on [brief previous research or thesis topic].
-          I am broadly interested in making wireless systems faster, more reliable, and more
-          energy-efficient.
+          Currently, I am doing my final research internship at <a href="https://www.orange.com/en">Orange Innovation</a>, advised by <a href="https://mohamedkadhem.com/" >Dr. Mohamed Karray</a>.
+          I am broadly interested in predicting the evolution of QoS in cellular networks with physics-informed machine learning.
         </p>
         <p class="hero-bio">
-          I am currently looking for collaborations and open to discussing research ideas.
+          Always open to talk, discuss and share experiences from research and life.
           Feel free to reach out!
         </p>
 
         <div class="hero-interests">
-          <span class="interest-tag">6G &amp; Beyond</span>
-          <span class="interest-tag">MIMO Systems</span>
-          <span class="interest-tag">Channel Estimation</span>
-          <span class="interest-tag">ML for Comms</span>
-          <span class="interest-tag">Physical Layer Security</span>
-          <span class="interest-tag">Energy-Efficient Protocols</span>
+          <span class="interest-tag">5G/6G &amp; Beyond</span>
+          <span class="interest-tag">Wireless Communications</span>
+          <span class="interest-tag">AI/ML</span>
+          <span class="interest-tag">Antennas</span>
+          <span class="interest-tag">PHY Layer</span>
+          <span class="interest-tag">RF</span>
         </div>
       </div>
 
@@ -118,7 +112,7 @@
   <hr class="section-rule" />
 
   <div class="cv-download-bar">
-    <span>Full CV available as PDF</span>
+    <span>Full CV</span>
     <a href="files/cv.pdf" class="btn" download>⬇ Download PDF</a>
   </div>
 
@@ -127,29 +121,28 @@
     <div class="cv-block-title">Education</div>
 
     <div class="cv-entry">
-      <span class="cv-year">2024 – present</span>
+      <span class="cv-year">2025 – pres.</span>
       <div class="cv-entry-body">
-        <h4>PhD in Electrical Engineering</h4>
-        <div class="cv-org">University Name, City, Country</div>
-        <p>Advisor: Prof. Supervisor Name · Lab: Wireless Communications Lab</p>
+        <h4>M.Sc. Electrical Engineering</h4>
+        <div class="cv-org">Institut Polytechnique de Paris</div>
+        <p>Thesis: "Prediction of QoS Evolution in Wireless Networks Using Physics-Informed ML"</p>
       </div>
     </div>
 
     <div class="cv-entry">
-      <span class="cv-year">2022 – 2024</span>
+      <span class="cv-year">2024 – 2025</span>
       <div class="cv-entry-body">
-        <h4>MSc in Electrical Engineering</h4>
-        <div class="cv-org">University Name, City, Country</div>
-        <p>Thesis: "Title of Your Master's Thesis" · GPA: X.X / 4.0</p>
+        <h4>M.Eng. Electrical and Optical Engineering</h4>
+        <div class="cv-org">Télécom SudParis</div>
+        <p>Final Project: "Indoor Positioning System Using UWB Signals"</p>
       </div>
     </div>
 
     <div class="cv-entry">
-      <span class="cv-year">2018 – 2022</span>
+      <span class="cv-year">2021 – 2024</span>
       <div class="cv-entry-body">
-        <h4>BSc in Electrical Engineering</h4>
-        <div class="cv-org">University Name, City, Country</div>
-        <p>Graduated with honours · GPA: X.X / 4.0</p>
+        <h4>B.Sc. Electrical Engineering</h4>
+        <div class="cv-org">Universidade Estadual de Campinas (UNICAMP)</div>
       </div>
     </div>
   </div>
@@ -159,20 +152,20 @@
     <div class="cv-block-title">Research Experience</div>
 
     <div class="cv-entry">
-      <span class="cv-year">2024 – present</span>
+      <span class="cv-year">Mar '26 – present</span>
       <div class="cv-entry-body">
-        <h4>Graduate Research Assistant</h4>
-        <div class="cv-org">Wireless Communications Lab, University Name</div>
-        <p>Brief description of current research activities and contributions.</p>
+        <h4>Research Intern</h4>
+        <div class="cv-org">Orange Innovation</div>
+        <p>Software and RAN (SRA) team</p>
       </div>
     </div>
 
     <div class="cv-entry">
-      <span class="cv-year">Summer 2023</span>
+      <span class="cv-year">Jul '25 - Sep '25</span>
       <div class="cv-entry-body">
-        <h4>Research Intern</h4>
-        <div class="cv-org">Company or Institution Name</div>
-        <p>Brief description of internship project and outcomes.</p>
+        <h4>Summer Research Intern</h4>
+        <div class="cv-org">Electronics and Physics Department (EPh) at Télécom SudParis</div>
+        <p>Hyperfrequency Lab</p>
       </div>
     </div>
   </div>
@@ -181,11 +174,12 @@
   <div class="cv-block">
     <div class="cv-block-title">Teaching</div>
     <div class="cv-entry">
-      <span class="cv-year">Fall 2024</span>
+      <span class="cv-year">2024.1</span>
       <div class="cv-entry-body">
-        <h4>Teaching Assistant — EE 301: Digital Communications</h4>
-        <div class="cv-org">University Name</div>
-        <p>Led weekly recitation sections; held office hours; graded assignments.</p>
+        <h4>EA616: Linear Systems Analysis</h4>
+        <div class="cv-org">UNICAMP</div>
+        <p>Laplace/Z transforms, frequency response, state equations, controlability and stability</p>
+        <a href="files/cv.pdf" class="filter-btn" download>Book</a>
       </div>
     </div>
   </div>
@@ -196,32 +190,16 @@
     <div class="cv-entry">
       <span class="cv-year">2024</span>
       <div class="cv-entry-body">
-        <h4>Name of Fellowship / Scholarship</h4>
-        <div class="cv-org">Awarding Body</div>
+        <h4>BRAFITEC Scholarship</h4>
+        <div class="cv-org">Coordenção de Aperfeiçoamento de Pessoal Superior (CAPES)</div>
       </div>
     </div>
     <div class="cv-entry">
       <span class="cv-year">2022</span>
       <div class="cv-entry-body">
-        <h4>Best Thesis Award</h4>
-        <div class="cv-org">Department of Electrical Engineering, University Name</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Skills -->
-  <div class="cv-block">
-    <div class="cv-block-title">Technical Skills</div>
-    <div class="cv-entry">
-      <span class="cv-year">Languages</span>
-      <div class="cv-entry-body">
-        <p>Python, MATLAB, C/C++, LaTeX</p>
-      </div>
-    </div>
-    <div class="cv-entry">
-      <span class="cv-year">Tools</span>
-      <div class="cv-entry-body">
-        <p>PyTorch, NumPy, GNU Radio, USRP SDR platforms, Git</p>
+        <h4>2nd Place Prize</h4>
+        <div class="cv-org">International Physicists Tournament (IPT)</div>
+        <p>Team Brazil</p>
       </div>
     </div>
   </div>
@@ -241,42 +219,34 @@
   <ul class="update-list">
 
     <li class="update-item">
-      <span class="update-date">Apr 2025</span>
+      <span class="update-date">May 2026</span>
+      <span class="update-text">
+        <span class="update-badge badge-talk">Poster</span>
+        Presented our most recent paper at the <a href="#">URSI France "Journées Scientifiques 2026"</a> in Palaiseau, France.
+      </span>
+    </li>
+
+    <li class="update-item">
+      <span class="update-date">May 2026</span>
       <span class="update-text">
         <span class="update-badge badge-paper">Paper</span>
-        New preprint available on arXiv: <a href="#">"Title of Your Paper"</a>.
+        New preprint available on arXiv: <a href="#">"Deep Learning-Based Uplink Transmit Power Estimation 4G/5G Networks"</a>.
       </span>
     </li>
 
     <li class="update-item">
-      <span class="update-date">Mar 2025</span>
+      <span class="update-date">Sep 2025</span>
       <span class="update-text">
-        <span class="update-badge badge-talk">Talk</span>
-        Presented our work on [topic] at the <a href="#">Conference Name 2025</a> in City, Country.
-      </span>
-    </li>
-
-    <li class="update-item">
-      <span class="update-date">Jan 2025</span>
-      <span class="update-text">
-        <span class="update-badge badge-award">Award</span>
-        Received the [Award Name] from [Organisation]. Honoured to be recognised!
+        <span class="update-badge badge-news">News</span>
+        Thrilled to have started my Masters at Instiut Polytechnique Paris!
       </span>
     </li>
 
     <li class="update-item">
       <span class="update-date">Sep 2024</span>
       <span class="update-text">
-        <span class="update-badge badge-news">News</span>
-        Started my PhD at University Name under the supervision of Prof. Supervisor Name. Excited for the journey ahead!
-      </span>
-    </li>
-
-    <li class="update-item">
-      <span class="update-date">Jul 2024</span>
-      <span class="update-text">
-        <span class="update-badge badge-travel">Travel</span>
-        Attended the <a href="#">IEEE ICC 2024</a> workshop in Denver, CO, USA.
+        <span class="update-badge badge-award">Award</span>
+        I received the BRAFITEC scholarship from CAPES for my studies in France. Honoured to be recognised!
       </span>
     </li>
 
@@ -299,41 +269,25 @@
     <button class="filter-btn" data-filter="journal">Journals</button>
     <button class="filter-btn" data-filter="conference">Conferences</button>
     <button class="filter-btn" data-filter="preprint">Preprints</button>
+    <button class="filter-btn" data-filter="thesis">Theses</button>
   </div>
 
   <ul class="pub-list">
 
-    <li class="pub-item" data-type="preprint">
-      <div class="pub-title">Title of Your Most Recent Preprint or Submitted Paper</div>
-      <div class="pub-authors"><strong>J. Doe</strong>, A. Coauthor, B. Coauthor, and Prof. Supervisor</div>
-      <div class="pub-venue">arXiv preprint arXiv:XXXX.XXXXX, 2025</div>
-      <div class="pub-links">
-        <a href="#" class="pub-link">arXiv</a>
-        <a href="#" class="pub-link">PDF</a>
-        <a href="#" class="pub-link">Code</a>
-      </div>
-    </li>
-
-    <li class="pub-item" data-type="conference">
-      <div class="pub-title">Title of Your Conference Paper</div>
-      <div class="pub-authors"><strong>J. Doe</strong>, A. Coauthor, and Prof. Supervisor</div>
-      <div class="pub-venue">Proc. IEEE International Conference on Communications (ICC), Denver, CO, 2024</div>
-      <div class="pub-links">
-        <a href="#" class="pub-link">IEEE</a>
-        <a href="#" class="pub-link">PDF</a>
-        <a href="#" class="pub-link">Slides</a>
-      </div>
-    </li>
-
-    <li class="pub-item" data-type="journal">
-      <div class="pub-title">Title of a Journal Article (e.g. from your Master's)</div>
-      <div class="pub-authors"><strong>J. Doe</strong>, A. Coauthor, and B. Coauthor</div>
-      <div class="pub-venue">IEEE Transactions on Communications, vol. XX, no. X, pp. XX–XX, 2023</div>
-      <div class="pub-links">
-        <a href="#" class="pub-link">IEEE</a>
-        <a href="#" class="pub-link">PDF</a>
-      </div>
-    </li>
+  <li class="pub-item" data-type="preprint">
+    <div class="pub-title">[P01] Deep Learning-Based Uplink Transmit Power Estimation in 4G/5G Networks</div>
+    <div class="pub-authors"><strong>A. Ribas</strong>, Q. Sun, S. Wang, J. Wiart</div>
+    <div class="pub-venue">arXiv preprint arXiv:XXXX.XXXXX, 2026</div>
+    <div class="pub-links">
+      <a href="#" class="pub-link">arXiv</a>
+      <a href="#" class="pub-link">PDF</a>
+      <a href="#" class="pub-link">Code</a>
+    </div>
+    <div class="pub-tldr">
+      <span class="pub-tldr-label">TL;DR</span>
+      A method to estimate the power emitted by a user from any point in an urban area using data from the surrounding base stations.
+    </div>
+  </li>
 
   </ul>
 
@@ -348,43 +302,68 @@
 
   <h2 class="section-title">Other</h2>
   <hr class="section-rule" />
+  
+  <div>
+    <p> Here is a collection of miscellaneous things I like! </p>
+  </div>
 
   <div class="other-grid">
 
-    <div class="other-card">
-      <h3>📚 Reading &amp; Resources</h3>
-      <p>A collection of papers, books, and links I have found useful for my research in wireless communications and signal processing.</p>
-      <!-- Link to a separate page or a list -->
+  <div class="other-card" onclick="toggleCard(this)">
+    <div class="other-card-header">
+      <h3>📚 International Physicists Tournament (IPT)</h3>
+      <span class="other-card-arrow">▸</span>
     </div>
-
-    <div class="other-card">
-      <h3>🎓 Academic Service</h3>
-      <p>Reviewer for IEEE Transactions on Wireless Communications, IEEE Communications Letters. Member of IEEE and IEEE ComSoc.</p>
+    <p class="other-card-summary">I was a member of Team Unicamp and Team Brazil from 2021 to 2023.</p>
+    <div class="other-card-body">
+      <p>
+        The IPT is the largest annual competition in experimental physics for undergradute and graduate students in the world.
+        Every year, teams of six students work on solutions of 17 open problems proposed by the organization, that can range from
+        simple experiments to complex new phenomena. The best teams from each university compete in the regionals, and the winners 
+        represent their country on the international stage.
+      </p>
+      <p>
+        Get to know more about the tournament here:
+      </p>
+      <ul>
+        <li><a href="https://ipt.science/">Official Website</a></li>
+        <li><a href="https://ipt.science/ipt_connect-2016-2022/index.html">2022 Edition Results</a></li>
+        <li><a href="https://www.youtube.com/watch?v=PSrv5w4eRrY">2022 Final: Brazil x France x Switzerland</a></li>
+      </ul>
     </div>
-
-    <div class="other-card">
-      <h3>🌍 Outreach &amp; Mentoring</h3>
-      <p>I enjoy mentoring undergraduate students and participating in science outreach events. Reach out if you'd like to chat about research or grad school applications.</p>
-    </div>
-
-    <div class="other-card">
-      <h3>💡 Side Projects</h3>
-      <p>Outside of my main research, I tinker with software-defined radio (SDR) and enjoy building small embedded systems for hobby projects.</p>
-    </div>
-
-    <div class="other-card">
-      <h3>🏔️ Outside the Lab</h3>
-      <p>When I'm not in the lab, I enjoy hiking, photography, and playing chess. I'm always happy to discuss research over coffee!</p>
-    </div>
-
   </div>
 
+  <div class="other-card" onclick="toggleCard(this)">
+    <div class="other-card-header">
+      <h3>🎾 Tennis</h3>
+      <span class="other-card-arrow">▸</span>
+    </div>
+    <p class="other-card-summary">I'm an avid tennis player since I was 12. I grew up on clay!</p>
+    <div class="other-card-body">
+      <p>
+        Here are some photos from nice tennis moments I have experienced over the years. 
+        My ultimate goal as a fan is to attend all 4 grand slams.
+      </p>
+    </div>
+  </div>
+
+  <div class="other-card" onclick="toggleCard(this)">
+    <div class="other-card-header">
+      <h3>More</h3>
+      <span class="other-card-arrow">▸</span>
+    </div>
+    <p class="other-card-summary">Under construction...</p>
+    <div class="other-card-body">
+    </div>
+  </div>
+
+  </div>
 </main>
 </div>
 
 <!-- ── Footer ───────────────────────────────────────────────── -->
 <footer>
-  <p>© <span id="year"></span> Jane Doe · Built with plain HTML &amp; CSS · Hosted on GitHub Pages</p>
+  <p>© <span id="year"></span> Álvaro Ribas · All rights reserved</p>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </footer>
 
