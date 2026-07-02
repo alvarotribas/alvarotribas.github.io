@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Álvaro Ribas' Website</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231d4ed8'/><text x='50' y='72' font-size='62' font-family='serif' font-weight='bold' text-anchor='middle' fill='white'>A</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230d9448'/><text x='50' y='72' font-size='62' font-family='serif' font-weight='bold' text-anchor='middle' fill='white'>A</text></svg>">
   <meta name="description" content="Personal academic website of Álvaro Ribas, PhD student in Electrical Engineering specialising in Telecommunications." />
 
   <!-- Fonts -->
@@ -20,6 +20,12 @@
 <nav>
   <div class="nav-inner">
     <a href="#home" class="nav-brand" data-page="home" onclick="event.preventDefault();navigate('home')">Álvaro T. Ribas</a>
+ 
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </label>
+ 
     <ul class="nav-links">
       <li><a href="#home"         data-page="home">About</a></li>
       <li><a href="#cv"           data-page="cv">CV</a></li>
@@ -95,9 +101,9 @@
           <span class="interest-tag">5G/6G &amp; Beyond</span>
           <span class="interest-tag">Wireless Communications</span>
           <span class="interest-tag">AI/ML</span>
-          <span class="interest-tag">Antennas</span>
           <span class="interest-tag">PHY Layer</span>
           <span class="interest-tag">RF</span>
+          <span class="interest-tag">LEO</span>
         </div>
       </div>
 
@@ -234,7 +240,7 @@
       <span class="update-date">May 2026</span>
       <span class="update-text">
         <span class="update-badge badge-paper">Paper</span>
-        New preprint available on arXiv: <a href="#">"Deep Learning-Based Uplink Transmit Power Estimation 4G/5G Networks"</a>.
+        New preprint available: <a href="#">"Deep Learning-Based Uplink Transmit Power Estimation 4G/5G Networks"</a>.
       </span>
     </li>
 
@@ -283,13 +289,13 @@
     <div class="pub-authors"><strong>A. Ribas</strong>, Q. Sun, S. Wang, J. Wiart</div>
     <div class="pub-venue">Journées Scientifiques d'URSI France, 2026</div>
     <div class="pub-links">
-      <a href="https://doi.org/10.5281/zenodo.20137680" class="pub-link">Zenodo</a>
+      <a href="https://doi.org/10.5281/zenodo.20137680" class="pub-link">DOI</a>
       <a href="https://zenodo.org/records/20137679/files/RIBAS_Alvaro_JS26_URSI_paper.pdf?download=1" class="pub-link">PDF</a>
       <a href="https://github.com/alvarotribas/IPParis/tree/main/PRO7225" class="pub-link">Code</a>
     </div>
     <div class="pub-tldr">
       <span class="pub-tldr-label">TL;DR</span>
-      A method to estimate the power emitted by a user from any point in an urban area using data from the surrounding base stations.
+      A method to estimate the uplink power from a user at any point in an urban area using data from the surrounding base stations.
     </div>
   </li>
 
@@ -308,14 +314,14 @@
   <hr class="section-rule" />
   
   <div>
-    <p> Here is a collection of miscellaneous things I like! </p>
+    <p> Here is a collection of miscellaneous things about me! </p>
   </div>
 
   <div class="other-grid">
 
   <div class="other-card" onclick="toggleCard(this)">
     <div class="other-card-header">
-      <h3>📚 International Physicists' Tournament (IPT)</h3>
+      <h3>⚛️ International Physicists' Tournament (IPT)</h3>
       <span class="other-card-arrow">▸</span>
     </div>
     <p class="other-card-summary">I was a member of Team Unicamp and Team Brazil from 2021 to 2023.</p>
@@ -351,7 +357,7 @@
       <div class="other-card-photos">
         <figure>
           <img src="images/IMG_0058.jpeg" alt="Tennis photo 1" />
-          <figcaption>Court Phillippe-Chartier, the main court for Roland Garros, during a visit (2024)</figcaption>
+          <figcaption>Court Phillippe-Chatrier, the main court for Roland Garros, during a visit (2024)</figcaption>
         </figure>
         <figure>
           <img src="images/IMG_0484.jpeg" alt="Tennis photo 2" />
@@ -375,7 +381,7 @@
       <p>
         I grew up in the state of <a href="https://en.wikipedia.org/wiki/Minas_Gerais">Minas Gerais</a>, known for its rich architecture, culinary,
         and friendly people. We are particularly recognised by our traditional <a href="https://www.oliviascuisine.com/authentic-brazilian-cheese-bread/">pão de queijo</a>,
-        our coffee, and our cheese -- <a href="https://en.wikipedia.org/wiki/Canastra_cheese">canastra</a> is my favorite!
+        our coffee, and our cheese — <a href="https://en.wikipedia.org/wiki/Canastra_cheese">canastra</a> is my favorite!
       </p>
       <p>
         The music from Minas is also a gentle reminder of home that I listen to daily. I'm personally fond of 

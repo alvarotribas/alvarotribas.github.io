@@ -7,6 +7,10 @@ function navigate(target) {
   navLinks.forEach(a => a.classList.toggle('active', a.dataset.page === target));
   window.scrollTo({ top: 0, behavior: 'smooth' });
   history.replaceState(null, '', '#' + target);
+
+  // Close the mobile nav menu (if open) whenever navigation happens
+  const navToggle = document.getElementById('nav-toggle');
+  if (navToggle) navToggle.checked = false;
 }
 
 navLinks.forEach(a => {

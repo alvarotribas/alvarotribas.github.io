@@ -5,8 +5,8 @@
   --border:    #e4e4dc;
   --text:      #1a1a18;
   --muted:     #6b6b62;
-  --accent:    #1d4ed8;       /* deep blue — telecom / circuit feel */
-  --accent-lt: #eff4ff;
+  --accent:    #0d9448;       /* banderia green */
+  --accent-lt: #e9f8ef;
   --font-sans: 'DM Sans', sans-serif;
   --font-serif:'Lora', Georgia, serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -83,6 +83,31 @@ nav {
   margin-top: 0.5rem;
 }
 
+/* Hamburger toggle — hidden on desktop, shown via the mobile media query below */
+.nav-toggle-checkbox { display: none; }
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 15px;
+  cursor: pointer;
+  z-index: 101;
+}
+.nav-toggle-label span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+ 
+.other-card-body p + p {
+  margin-top: 0.5rem;
+}
+
+
 /* ── Page wrapper ─────────────────────────────────────────────── */
 .page { display: none; }
 .page.active { display: block; }
@@ -139,7 +164,7 @@ main {
   height: 200px;
   border-radius: 60%;
   object-fit: cover;
-  border: 4px solid #1d4ed8;
+  border: 4px solid #0d9448;
   box-shadow: 0 2px 16px rgba(0,0,0,0.10);
 }
 .hero-photo-placeholder {
@@ -178,7 +203,7 @@ main {
 .hero-link svg { flex-shrink: 0; opacity: 0.6; }
 .hero-link:hover {
   color: var(--accent);
-  background: rgba(29,78,216,0.07);
+  background: rgba(13,148,72,0.07);
   text-decoration: none;
 }
 .hero-link:hover svg { opacity: 1; }
@@ -249,7 +274,7 @@ main {
   align-items: center;
   justify-content: space-between;
   background: var(--accent-lt);
-  border: 1px solid #c7d7f9;
+  border: 1px solid #bfe6cf;
   border-radius: 6px;
   padding: 0.75rem 1rem;
   margin-bottom: 2.5rem;
@@ -284,15 +309,18 @@ main {
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--border);
 }
-.cv-entry { display: flex; gap: 1rem; margin-bottom: 1.25rem; }
+.cv-entry { display: flex; justify-content: space-between; gap: 1.5rem; margin-bottom: 1.25rem; }
 .cv-year {
+  order: 2;
+  flex-shrink: 0;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--muted);
   white-space: nowrap;
   padding-top: 0.15rem;
-  min-width: 4.5rem;
+  text-align: right;
 }
+.cv-entry-body { order: 1; }
 .cv-entry-body h4 {
   font-size: 0.95rem;
   font-weight: 700;
@@ -308,6 +336,7 @@ main {
   font-size: 0.85rem;
   color: var(--muted);
 }
+
 
 /* ── UPDATES ──────────────────────────────────────────────────── */
 .update-list { list-style: none; }
@@ -452,7 +481,7 @@ main {
 }
 .other-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 2px 12px rgba(29,78,216,0.07);
+  box-shadow: 0 2px 12px rgba(13,148,72,0.07);
 }
 .other-card h3 {
   font-size: 0.95rem;
@@ -474,39 +503,95 @@ footer {
 }
 
 /* ── Responsive ───────────────────────────────────────────────── */
+ 
+/* Tablet: tighten spacing a little, everything else already reflows fine */
+@media (max-width: 900px) {
+  .home-hero { padding: 3rem 1.5rem; }
+  main { padding: 3rem 1.25rem 4rem; }
+}
+ 
+/* Phone (and small tablets in portrait): stack hero, collapse nav into a menu */
 @media (max-width: 640px) {
+  .home-hero { min-height: auto; padding: 2.5rem 1.5rem; }
   .hero-inner { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
   .hero-aside { align-items: center; }
-  .hero-links { align-items: flex-start; max-width: 200px; margin: 0 auto; }
+  .hero-photo { width: 160px; height: 160px; }
+  .hero-links { align-items: flex-start; max-width: 220px; margin: 0 auto; }
+  .hero-name { font-size: 1.9rem; }
   .hero-divider { margin: 1.25rem auto; }
   .hero-interests { justify-content: center; }
-  .nav-links a { padding: 0.3rem 0.45rem; font-size: 0.73rem; }
+ 
+  /* Nav collapses into a hamburger-driven dropdown */
+  .nav-toggle-label { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+    padding: 0.5rem 1.25rem 1rem;
+  }
+  .nav-toggle-checkbox:checked ~ .nav-links { display: flex; }
+  .nav-links a {
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+  .nav-toggle-checkbox:checked ~ .nav-toggle-label span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-toggle-checkbox:checked ~ .nav-toggle-label span:nth-child(2) { opacity: 0; }
+  .nav-toggle-checkbox:checked ~ .nav-toggle-label span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+ 
+  /* CV entries stack: date sits above the title instead of squeezing beside it */
+  .cv-entry { flex-direction: column; gap: 0.15rem; }
+  .cv-year { order: -1; text-align: left; }
+ 
+  /* Update rows stack the same way */
+  .update-item { flex-direction: column; gap: 0.3rem; }
+  .update-date { min-width: 0; }
+ 
+  /* Two-up photo grid gets a bit tight on phones — go single column */
+  .other-card-photos { grid-template-columns: 1fr; }
+  .other-card { padding: 1rem 1.1rem; }
 }
-
+ 
+/* Small phones: trim a bit further */
+@media (max-width: 400px) {
+  .nav-brand { font-size: 0.92rem; }
+  .hero-name { font-size: 1.6rem; }
+  .hero-photo { width: 130px; height: 130px; }
+  .section-title { font-size: 1.4rem; }
+}
+ 
 .other-card { cursor: pointer; }
-
+ 
 .other-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
+ 
 .other-card-summary {
   font-size: 0.85rem;
   color: var(--muted);
   margin-top: 0.4rem;
 }
-
+ 
 .other-card-arrow {
   font-size: 0.9rem;
   color: var(--muted);
   transition: transform 0.25s;
 }
-
+ 
 .other-card.open .other-card-arrow {
   transform: rotate(90deg);
 }
-
+ 
 .other-card-body {
   display: none;
   margin-top: 0.75rem;
@@ -515,18 +600,18 @@ footer {
   border-top: 1px solid var(--border);
   padding-top: 0.75rem;
 }
-
+ 
 .other-card-body ul {
   margin-top: 0.5rem;
   padding-left: 1.1rem;
 }
-
+ 
 .other-card-body li { margin-bottom: 0.3rem; }
-
+ 
 .other-card.open .other-card-body {
   display: block;
 }
-
+ 
 /* ── Other card photos ────────────────────────────────────────── */
 .other-card-photos {
   display: grid;
@@ -534,11 +619,11 @@ footer {
   gap: 0.75rem;
   margin-top: 1rem;
 }
-
+ 
 .other-card-photos figure {
   margin: 0;
 }
-
+ 
 .other-card-photos img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -547,7 +632,7 @@ footer {
   border: 1px solid var(--border);
   display: block;
 }
-
+ 
 .other-card-photos figcaption {
   font-size: 0.75rem;
   color: var(--muted);
