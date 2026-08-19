@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored || (prefersDark ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) {}
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Álvaro Ribas' Website</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230d9448'/><text x='50' y='72' font-size='62' font-family='serif' font-weight='bold' text-anchor='middle' fill='white'>A</text></svg>">
@@ -20,19 +30,26 @@
 <nav>
   <div class="nav-inner">
     <a href="#home" class="nav-brand" data-page="home" onclick="event.preventDefault();navigate('home')">Álvaro T. Ribas</a>
- 
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
-      <span></span><span></span><span></span>
-    </label>
- 
-    <ul class="nav-links">
-      <li><a href="#home"         data-page="home">About</a></li>
-      <li><a href="#cv"           data-page="cv">CV</a></li>
-      <li><a href="#updates"      data-page="updates">Updates</a></li>
-      <li><a href="#publications" data-page="publications">Publications</a></li>
-      <li><a href="#other"        data-page="other">Other</a></li>
-    </ul>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#home"         data-page="home">About</a></li>
+        <li><a href="#cv"           data-page="cv">CV</a></li>
+        <li><a href="#updates"      data-page="updates">Updates</a></li>
+        <li><a href="#publications" data-page="publications">Publications</a></li>
+        <li><a href="#other"        data-page="other">Other</a></li>
+      </ul>
+
+      <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+      </button>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
   </div>
 </nav>
 
@@ -98,12 +115,11 @@
         </p>
 
         <div class="hero-interests">
-          <span class="interest-tag">5G/6G &amp; Beyond</span>
+          <span class="interest-tag">5G/6G</span>
           <span class="interest-tag">Wireless Communications</span>
+          <span class="interest-tag">Stochastic Geometry</span>
           <span class="interest-tag">AI/ML</span>
-          <span class="interest-tag">PHY Layer</span>
-          <span class="interest-tag">RF</span>
-          <span class="interest-tag">LEO</span>
+          <span class="interest-tag">Radio Maps</span>
         </div>
       </div>
 
@@ -123,7 +139,7 @@
 
   <div class="cv-download-bar">
     <span>Full CV</span>
-    <a href="files/cv.pdf" class="btn" download>⬇ Download PDF</a>
+    <a href="files/CV_August_2026.pdf" class="btn" download>Download PDF</a>
   </div>
 
   <!-- Education -->
@@ -229,33 +245,41 @@
   <ul class="update-list">
 
     <li class="update-item">
-      <span class="update-date">May 2026</span>
-      <span class="update-text">
+      <div class="update-meta">
+        <span class="update-date">May 2026</span>
         <span class="update-badge badge-talk">Poster</span>
+      </div>
+      <span class="update-text">
         Presented our most recent paper at <a href="#">URSI France "Journées Scientifiques 2026"</a> in Palaiseau, France.
       </span>
     </li>
 
     <li class="update-item">
-      <span class="update-date">May 2026</span>
-      <span class="update-text">
+      <div class="update-meta">
+        <span class="update-date">May 2026</span>
         <span class="update-badge badge-paper">Paper</span>
+      </div>
+      <span class="update-text">
         New preprint available: <a href="#">"Deep Learning-Based Uplink Transmit Power Estimation 4G/5G Networks"</a>.
       </span>
     </li>
 
     <li class="update-item">
-      <span class="update-date">Sep 2025</span>
-      <span class="update-text">
+      <div class="update-meta">
+        <span class="update-date">Sep 2025</span>
         <span class="update-badge badge-news">News</span>
+      </div>
+      <span class="update-text">
         Thrilled to have started my Masters at Instiut Polytechnique de Paris!
       </span>
     </li>
 
     <li class="update-item">
-      <span class="update-date">Sep 2024</span>
-      <span class="update-text">
+      <div class="update-meta">
+        <span class="update-date">Sep 2024</span>
         <span class="update-badge badge-award">Award</span>
+      </div>
+      <span class="update-text">
         I received the BRAFITEC scholarship from CAPES for my studies in France. Honoured to be recognised!
       </span>
     </li>
@@ -321,7 +345,20 @@
 
   <div class="other-card" onclick="toggleCard(this)">
     <div class="other-card-header">
-      <h3>⚛️ International Physicists' Tournament (IPT)</h3>
+      <h3>🛠︎ Personal Projects</h3>
+      <span class="other-card-arrow">▸</span>
+    </div>
+    <p class="other-card-summary">Some personal side projects, with themes from sports to politics.</p>
+    <div class="other-card-body">
+      <ul>
+        <li>Political dashboard (in progress).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="other-card" onclick="toggleCard(this)">
+    <div class="other-card-header">
+      <h3>⚛︎ International Physicists' Tournament (IPT)</h3>
       <span class="other-card-arrow">▸</span>
     </div>
     <p class="other-card-summary">I was a member of Team Unicamp and Team Brazil from 2021 to 2023.</p>
@@ -345,7 +382,7 @@
 
   <div class="other-card" onclick="toggleCard(this)">
     <div class="other-card-header">
-      <h3>🎾 Tennis</h3>
+      <h3>🎾︎ Tennis</h3>
       <span class="other-card-arrow">▸</span>
     </div>
     <p class="other-card-summary">I'm an avid tennis player since I was 12. I grew up on clay!</p>
@@ -373,7 +410,7 @@
 
   <div class="other-card" onclick="toggleCard(this)">
     <div class="other-card-header">
-      <h3>🇧🇷 Brazil</h3>
+      <h3>🏠︎ Brazil</h3>
       <span class="other-card-arrow">▸</span>
     </div>
     <p class="other-card-summary">I'm Brazilian and very proudly so. I like to talk about my country whenever I have the chance.</p>
@@ -388,6 +425,12 @@
         <a href="https://www.youtube.com/watch?v=v43du81eZHw&list=RDv43du81eZHw&start_radio=1">Milton Nascimento</a> and
         <a href="https://www.youtube.com/watch?v=9tmJUpTQV4E&list=RD9tmJUpTQV4E&start_radio=1">Lagum</a>.
       </p>
+      <div class="other-card-photo-single">
+        <figure>
+          <img src="images/20210817_064939.jpg" alt="Brazil photo" />
+          <figcaption>Sunrise over a foggy hill. São Lourenço, MG (2021)</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 
