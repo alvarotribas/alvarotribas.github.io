@@ -32,12 +32,14 @@
     <a href="#home" class="nav-brand" data-page="home" onclick="event.preventDefault();navigate('home')">Álvaro T. Ribas</a>
 
     <div class="nav-right">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+
       <ul class="nav-links">
         <li><a href="#home"         data-page="home">About</a></li>
         <li><a href="#cv"           data-page="cv">CV</a></li>
         <li><a href="#updates"      data-page="updates">Updates</a></li>
         <li><a href="#publications" data-page="publications">Publications</a></li>
-        <li><a href="#other"        data-page="other">Other</a></li>
+        <li><a href="#other"        data-page="other">Others</a></li>
       </ul>
 
       <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
@@ -78,6 +80,10 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"/></svg>
             Google Scholar
           </a>
+          <a href="https://orcid.org/0009-0006-7965-3312" class="hero-link" target="_blank">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 10.5V17"/><path d="M8 7.5v.01"/><path d="M11.5 7.5V17h2a4.75 4.75 0 0 0 0-9.5h-2z"/></svg>
+            ORCID
+          </a>
           <a href="https://github.com/alvarotribas" class="hero-link" target="_blank">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
             GitHub
@@ -92,13 +98,13 @@
       <!-- RIGHT: name + bio -->
       <div class="hero-body">
         <h1 class="hero-name">Álvaro Ribas</h1>
-        <p class="hero-role">MSc Student in Electrical Engineering</p>
-        <p class="hero-affiliation">Institut Polytechnique de Paris</a></p>
+        <p class="hero-role">Master in Electrical Engineering</p>
+        <p class="hero-affiliation">Télécom Paris, Institut Polytechnique de Paris</a></p>
 
         <div class="hero-divider"></div>
 
         <p class="hero-bio">
-          I am a last-year MSc student in Electrical Engineering in the 
+          I'm a visiting research assistant in Electrical Engineering at the 
           <a href="https://www.telecom-paris.fr/fr/recherche/labos/traitement-information-ltci">Laboratoire Traitment et Communication de l'Information (LTCI)</a>
           at <a href="https://www.ip-paris.fr/">Télécom Paris, Institut Polytechnique de Paris</a>, advised by
           <a href="https://perso.telecom-paristech.fr/shwang/">Prof. Shanshan Wang</a>.
@@ -106,11 +112,11 @@
           <strong>stochastic geometry</strong> and <strong>machine learning</strong>. 
         </p>
         <p class="hero-bio">
-          Currently, I am doing my final research internship at <a href="https://www.orange.com/en">Orange Innovation</a>, advised by <a href="https://mohamedkadhem.com/" >Dr. Mohamed Karray</a>.
-          I am broadly interested in predicting the evolution of QoS in cellular networks with physics-informed machine learning.
+          Recently, I completed my Master's with a final research internship at <a href="https://www.orange.com/en">Orange Research</a>, advised by <a href="https://mohamedkadhem.com/" >Dr. Mohamed Karray</a>.
+          We were broadly interested in predicting the evolution of QoS in cellular networks with physics-informed machine learning.
         </p>
         <p class="hero-bio">
-          Always open to talk, discuss and share experiences from research and life.
+          I always like to talk, discuss and share experiences from research, science and life.
           Feel free to reach out!
         </p>
 
@@ -147,11 +153,12 @@
     <div class="cv-block-title">Education</div>
 
     <div class="cv-entry">
-      <span class="cv-year">2025 – pres.</span>
+      <span class="cv-year">2025 – 2026</span>
       <div class="cv-entry-body">
         <h4>M.Sc. Electrical Engineering</h4>
         <div class="cv-org">Institut Polytechnique de Paris</div>
-        <p>Thesis: "Prediction of QoS Evolution in Wireless Networks Using Physics-Informed ML"</p>
+        <p>Advisors: Mohamed Kadhem Karray (Orange), Shanshan Wang (Télécom Paris)</p>
+        <p>Thesis: "Prediction of QoS Metrics in Wireless Networks With Physics-Informed Machine Learning"</p>
       </div>
     </div>
 
@@ -159,16 +166,18 @@
       <span class="cv-year">2024 – 2025</span>
       <div class="cv-entry-body">
         <h4>M.Eng. Electrical and Optical Engineering</h4>
-        <div class="cv-org">Télécom SudParis</div>
-        <p>Final Project: "Indoor Positioning System Using UWB Signals"</p>
+        <div class="cv-org">Télécom SudParis, Institut Polytechnique de Paris</div>
+        <p>Advisor: Nel Samama</p>
+        <p>Final Project: "Indoor Positioning System Using Ulta Wideband (UWB) Signals"</p>
       </div>
     </div>
 
     <div class="cv-entry">
-      <span class="cv-year">2021 – 2024</span>
+      <span class="cv-year">2021 – 2027</span>
       <div class="cv-entry-body">
         <h4>B.Sc. Electrical Engineering</h4>
         <div class="cv-org">Universidade Estadual de Campinas (UNICAMP)</div>
+        <p>Advisor: José Cândido Silveira Santos Filhos</p>
       </div>
     </div>
   </div>
@@ -178,11 +187,20 @@
     <div class="cv-block-title">Research Experience</div>
 
     <div class="cv-entry">
-      <span class="cv-year">Mar '26 – present</span>
+      <span class="cv-year">Oct '26 – present</span>
+      <div class="cv-entry-body">
+        <h4>Winter Research Intern</h4>
+        <div class="cv-org">Télécom Paris</div>
+        <p>Chaire C2M, Laboratoire Traitement et Communication de l'Information (LTCI)</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <span class="cv-year">Mar '26 – Sep '26</span>
       <div class="cv-entry-body">
         <h4>Research Intern</h4>
-        <div class="cv-org">Orange Innovation</div>
-        <p>Software and RAN (SRA) team</p>
+        <div class="cv-org">Orange Research</div>
+        <p>Software and Radio Architecture (SRA) team</p>
       </div>
     </div>
 
@@ -190,8 +208,8 @@
       <span class="cv-year">Jul '25 - Sep '25</span>
       <div class="cv-entry-body">
         <h4>Summer Research Intern</h4>
-        <div class="cv-org">Electronics and Physics Department (EPh) at Télécom SudParis</div>
-        <p>Hyperfrequency Lab</p>
+        <div class="cv-org">Télécom SudParis</div>
+        <p>Hyperfrequency Lab, Electronics and Physics Department (EPh)</p>
       </div>
     </div>
   </div>
@@ -205,8 +223,9 @@
         <h4>EA616: Linear Systems Analysis</h4>
         <div class="cv-org">UNICAMP</div>
         <p>Laplace/Z transforms, frequency response, state equations, controlability and stability</p>
-        <a href="files/Guia-de-Estudos-EA616-AlvaroTonaRibasCruz-1S2024.pdf" class="filter-btn" download>Book</a>
-      </div>
+        <div class="pub-links">
+          <a href="files/Guia-de-Estudos-EA616-AlvaroTonaRibasCruz-1S2024.pdf" class="pub-link" download>Book</a>
+        </div>
     </div>
   </div>
 
@@ -220,14 +239,24 @@
         <div class="cv-org">Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES)</div>
       </div>
     </div>
+
     <div class="cv-entry">
       <span class="cv-year">2022</span>
       <div class="cv-entry-body">
         <h4>2nd Place Prize</h4>
         <div class="cv-org">International Physicists Tournament (IPT)</div>
-        <p>Team Brazil</p>
+        <p>Team Unicamp & Team Brazil</p>
       </div>
     </div>
+
+    <div class="cv-entry">
+      <span class="cv-year">2020</span>
+      <div class="cv-entry-body">
+        <h4>Silver Honour</h4>
+        <div class="cv-org">International Youth Math Challenge (IYMC)</div>
+      </div>
+    </div>
+
   </div>
 
 </main>
@@ -246,11 +275,31 @@
 
     <li class="update-item">
       <div class="update-meta">
+        <span class="update-date">Oct 2026</span>
+        <span class="update-badge badge-talk">Talk</span>
+      </div>
+      <span class="update-text">
+        Gave a short talk on AI architectures for user EMF transmission assessment at <a href="https://www.cnam.fr/">CNAM</a> in Paris, France.
+      </span>
+    </li>
+
+    <li class="update-item">
+      <div class="update-meta">
+        <span class="update-date">Oct 2026</span>
+        <span class="update-badge badge-news">News</span>
+      </div>
+      <span class="update-text">
+        I've completed my Master's at IP Paris with High Honours (Mention Bien)! Super proud of the work done.
+      </span>
+    </li>
+
+    <li class="update-item">
+      <div class="update-meta">
         <span class="update-date">May 2026</span>
         <span class="update-badge badge-talk">Poster</span>
       </div>
       <span class="update-text">
-        Presented our most recent paper at <a href="#">URSI France "Journées Scientifiques 2026"</a> in Palaiseau, France.
+        Presented our most recent paper at <a href="https://ursifr-2026.sciencesconf.org/?forward-action=index&forward-controller=index&lang=en">URSI France "Journées Scientifiques 2026"</a> in Palaiseau, France.
       </span>
     </li>
 
@@ -260,7 +309,17 @@
         <span class="update-badge badge-paper">Paper</span>
       </div>
       <span class="update-text">
-        New preprint available: <a href="#">"Deep Learning-Based Uplink Transmit Power Estimation 4G/5G Networks"</a>.
+        New paper available: <a href="#">"Deep Learning-Based Uplink Transmit Power Estimation 4G/5G Networks"</a>.
+      </span>
+    </li>
+
+    <li class="update-item">
+      <div class="update-meta">
+        <span class="update-date">Mar 2026</span>
+        <span class="update-badge badge-news">News</span>
+      </div>
+      <span class="update-text">
+        I have began my final-year internship at Orange Research in Châtillon, France.
       </span>
     </li>
 
@@ -270,7 +329,7 @@
         <span class="update-badge badge-news">News</span>
       </div>
       <span class="update-text">
-        Thrilled to have started my Masters at Instiut Polytechnique de Paris!
+        Thrilled to have started my Master's at Institut Polytechnique de Paris!
       </span>
     </li>
 
@@ -280,7 +339,7 @@
         <span class="update-badge badge-award">Award</span>
       </div>
       <span class="update-text">
-        I received the BRAFITEC scholarship from CAPES for my studies in France. Honoured to be recognised!
+        I received the  <a href="https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/encontre-aqui/paises/franca/programa-capes-brafitec">BRAFITEC scholarship</a> from CAPES for my studies in France. Honoured to be recognised!
       </span>
     </li>
 
@@ -308,18 +367,33 @@
 
   <ul class="pub-list">
 
-  <li class="pub-item" data-type="conference">
-    <div class="pub-title">Deep Learning-Based Uplink Transmit Power Estimation in 4G/5G Networks</div>
-    <div class="pub-authors"><strong>A. Ribas</strong>, Q. Sun, S. Wang, J. Wiart</div>
-    <div class="pub-venue">Journées Scientifiques d'URSI France, 2026</div>
+  <li class="pub-item" data-type="preprint">
+    <div class="pub-title">Hybrid Models for Predicting Cellular QoS Using Physics-Informed Machine Learning: From Simulations to Field Measurements</div>
+    <div class="pub-authors"><strong>Á. Ribas</strong>, M.K. Karray</div>
+    <div class="pub-venue">Submitted on October 2026</div>
     <div class="pub-links">
       <a href="https://doi.org/10.5281/zenodo.20137680" class="pub-link">DOI</a>
       <a href="https://zenodo.org/records/20137679/files/RIBAS_Alvaro_JS26_URSI_paper.pdf?download=1" class="pub-link">PDF</a>
-      <a href="https://github.com/alvarotribas/IPParis/tree/main/PRO7225" class="pub-link">Code</a>
     </div>
     <div class="pub-tldr">
       <span class="pub-tldr-label">TL;DR</span>
-      A method to estimate the uplink power from a user at any point in an urban area using data from the surrounding base stations.
+      Models that can predict relevant QoS KPIs in simulated and operational networks without needing direct field measurements, using only traffic and locations at input.
+    </div>
+  </li>
+
+  <li class="pub-item" data-type="conference">
+    <div class="pub-title">Deep Learning-Based Uplink Transmit Power Estimation in 4G/5G Networks</div>
+    <div class="pub-authors"><strong>Á. Ribas</strong>, Q. Sun, S. Wang, J. Wiart</div>
+    <div class="pub-venue">Journées Scientifiques d'URSI France, 2026</div>
+    <div class="pub-links">
+      <a href="https://doi.org/10.5281/zenodo.20137680" class="pub-link">DOI</a>
+      <a href="files/RIBAS_Alvaro_JS26_URSI_paper.pdf" class="pub-link">PDF</a>
+      <a href="https://github.com/alvarotribas/IPParis/tree/main/PRO7225" class="pub-link">Code</a>
+      <a href="files/RIBAS_Alvaro_URSI_JS26_poster.pdf" class="pub-link">Poster</a>
+    </div>
+    <div class="pub-tldr">
+      <span class="pub-tldr-label">TL;DR</span>
+      A method to estimate the uplink power from a UE at any point in an urban area using data from the surrounding BSs.
     </div>
   </li>
 
@@ -334,40 +408,34 @@
 <div class="page" id="other">
 <main>
 
-  <h2 class="section-title">Other</h2>
+  <h2 class="section-title">Others</h2>
   <hr class="section-rule" />
   
   <div>
-    <p> Here is a collection of miscellaneous things about me! </p>
+    <p class="section-intro"> Here is a collection of miscellaneous things that I like! </p>
   </div>
 
   <div class="other-grid">
 
   <div class="other-card" onclick="toggleCard(this)">
     <div class="other-card-header">
-      <h3>🛠︎ Personal Projects</h3>
-      <span class="other-card-arrow">▸</span>
-    </div>
-    <p class="other-card-summary">Some personal side projects, with themes from sports to politics.</p>
-    <div class="other-card-body">
-      <ul>
-        <li>Political dashboard (in progress).</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="other-card" onclick="toggleCard(this)">
-    <div class="other-card-header">
       <h3>⚛︎ International Physicists' Tournament (IPT)</h3>
       <span class="other-card-arrow">▸</span>
     </div>
-    <p class="other-card-summary">I was a member of Team Unicamp and Team Brazil from 2021 to 2023.</p>
+    <p class="other-card-summary">I was a member of Team Unicamp and Team Brazil from 2021 to 2023, and still watch the tournament every year.</p>
     <div class="other-card-body">
       <p>
         The IPT is the largest annual competition in experimental physics for undergradute and graduate students in the world.
         Every year, teams of six students work on solutions of 17 open problems proposed by the organization, that can range from
         simple experiments to complex new phenomena. The best teams from each university compete in the regionals, and the winners 
-        represent their country on the international stage.
+        represent their country on the international stage, at the famous 'physics fights'.
+      </p>
+      <p>
+        Each 'physics fight' includes three teams at a time, for the roles of report, opposition and moderation. The reporter has 10 minutes to 
+        present its complete solution to the selected problem: formulation, theory, experiments, validation and conclusions. The role of the 
+        opposition is then to ask questions about the solution and point out its strenghts and weaknesses. Once both teams have presented, they begin 
+        to debate the most relevant points, while being moderated by a third team, which should lead them to debate important topics and answer the 
+        problem statement. 
       </p>
       <p>
         Get to know more about the tournament here:
@@ -423,7 +491,10 @@
       <p>
         The music from Minas is also a gentle reminder of home that I listen to daily. I'm personally fond of 
         <a href="https://www.youtube.com/watch?v=v43du81eZHw&list=RDv43du81eZHw&start_radio=1">Milton Nascimento</a> and
-        <a href="https://www.youtube.com/watch?v=9tmJUpTQV4E&list=RD9tmJUpTQV4E&start_radio=1">Lagum</a>.
+        <a href="https://www.youtube.com/watch?v=9tmJUpTQV4E&list=RD9tmJUpTQV4E&start_radio=1">Lagum</a>. Other of my national favorites include 
+        <a href="https://www.youtube.com/watch?v=nRLUH8Rd24g&list=RDnRLUH8Rd24g&start_radio=1">Emicida</a>, 
+        <a href="https://www.youtube.com/watch?v=AeM0mc1mvAs&list=RDAeM0mc1mvAs&start_radio=1">Rashid</a> and
+        <a href="https://www.youtube.com/watch?v=rXTqbIJx1UQ&list=RDrXTqbIJx1UQ&start_radio=1">Clarice Falcão</a>.
       </p>
       <div class="other-card-photo-single">
         <figure>
