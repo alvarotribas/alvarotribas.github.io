@@ -6,8 +6,8 @@
     (function () {
       try {
         var stored = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var theme = stored || (prefersDark ? 'dark' : 'light');
+        // First-time visitors always get the light theme; the toggle choice is remembered after that.
+        var theme = stored || 'light';
         if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
       } catch (e) {}
     })();
@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Álvaro Ribas' Website</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230d9448'/><text x='50' y='72' font-size='62' font-family='serif' font-weight='bold' text-anchor='middle' fill='white'>A</text></svg>">
-  <meta name="description" content="Personal academic website of Álvaro Ribas, PhD student in Electrical Engineering specialising in Telecommunications." />
+  <meta name="description" content="Personal academic website of Álvaro Ribas, Master in Electrical Engineering, specialising in Telecommunications." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,7 +47,6 @@
         <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
       </button>
 
-      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
         <span></span><span></span><span></span>
       </label>
@@ -65,7 +64,7 @@
 
       <!-- LEFT: photo + links -->
       <aside class="hero-aside">
-        <img src="images/photo.png" class="hero-photo" />
+        <img src="images/profile_photo.jpeg" class="hero-photo" alt="Álvaro Ribas" />
 
         <div class="hero-links">
           <div class="hero-link" style="cursor: default; pointer-events: none;">
@@ -99,13 +98,13 @@
       <div class="hero-body">
         <h1 class="hero-name">Álvaro Ribas</h1>
         <p class="hero-role">Master in Electrical Engineering</p>
-        <p class="hero-affiliation">Télécom Paris, Institut Polytechnique de Paris</a></p>
+        <p class="hero-affiliation">Télécom Paris, Institut Polytechnique de Paris</p>
 
         <div class="hero-divider"></div>
 
         <p class="hero-bio">
           I'm a visiting research assistant in Electrical Engineering at the 
-          <a href="https://www.telecom-paris.fr/fr/recherche/labos/traitement-information-ltci">Laboratoire Traitment et Communication de l'Information (LTCI)</a>
+          <a href="https://www.telecom-paris.fr/fr/recherche/labos/traitement-information-ltci">Laboratoire Traitement et Communication de l'Information (LTCI)</a>
           at <a href="https://www.ip-paris.fr/">Télécom Paris, Institut Polytechnique de Paris</a>, advised by
           <a href="https://perso.telecom-paristech.fr/shwang/">Prof. Shanshan Wang</a>.
           My main research lies at the intersection of <strong>wireless communications</strong>, 
@@ -144,8 +143,11 @@
   <hr class="section-rule" />
 
   <div class="cv-download-bar">
-    <span>Full CV</span>
-    <a href="files/CV_August_2026.pdf" class="btn" download>Full PDF</a>
+    <div class="cv-download-info">
+      <span class="cv-download-title">2-page CV</span>
+      <span class="cv-download-meta">Last update: November 10, 2026</span>
+    </div>
+    <a href="files/CV_August_2026.pdf" class="btn" download>Download PDF</a>
   </div>
 
   <!-- Education -->
@@ -167,8 +169,8 @@
       <div class="cv-entry-body">
         <h4>M.Eng. Electrical and Optical Engineering</h4>
         <div class="cv-org">Télécom SudParis, Institut Polytechnique de Paris</div>
-        <p>Advisor: Nel Samama</p>
-        <p>Final Project: "Indoor Positioning System Using Ulta Wideband (UWB) Signals"</p>
+        <p>Advisors: Nel Samama, Thierry Taillandier-Loize</p>
+        <p>Final Project: "Indoor Positioning System Using Ultra-Wideband (UWB) Signals"</p>
       </div>
     </div>
 
@@ -177,7 +179,7 @@
       <div class="cv-entry-body">
         <h4>B.Sc. Electrical Engineering</h4>
         <div class="cv-org">Universidade Estadual de Campinas (UNICAMP)</div>
-        <p>Advisor: José Cândido Silveira Santos Filhos</p>
+        <p>Advisor: José Cândido Silveira Santos Filho</p>
       </div>
     </div>
   </div>
@@ -205,7 +207,7 @@
     </div>
 
     <div class="cv-entry">
-      <span class="cv-year">Jul '25 - Sep '25</span>
+      <span class="cv-year">Jul '25 – Sep '25</span>
       <div class="cv-entry-body">
         <h4>Summer Research Intern</h4>
         <div class="cv-org">Télécom SudParis</div>
@@ -222,7 +224,7 @@
       <div class="cv-entry-body">
         <h4>EA616: Linear Systems Analysis</h4>
         <div class="cv-org">UNICAMP</div>
-        <p>Laplace/Z transforms, frequency response, state equations, controlability and stability</p>
+        <p>Laplace/Z transforms, frequency response, state equations, controllability and stability</p>
         <div class="pub-links">
           <a href="files/Guia-de-Estudos-EA616-AlvaroTonaRibasCruz-1S2024.pdf" class="pub-link" download>Book</a>
         </div>
@@ -244,7 +246,7 @@
       <span class="cv-year">2022</span>
       <div class="cv-entry-body">
         <h4>2nd Place Prize</h4>
-        <div class="cv-org">International Physicists Tournament (IPT)</div>
+        <div class="cv-org">International Physicists' Tournament (IPT)</div>
         <p>Team Unicamp & Team Brazil</p>
       </div>
     </div>
@@ -275,7 +277,7 @@
 
     <li class="update-item">
       <div class="update-meta">
-        <span class="update-date">Oct 2026</span>
+        <span class="update-date">Nov 2026</span>
         <span class="update-badge badge-talk">Talk</span>
       </div>
       <span class="update-text">
@@ -309,7 +311,7 @@
         <span class="update-badge badge-paper">Paper</span>
       </div>
       <span class="update-text">
-        New paper available: <a href="#">"Deep Learning-Based Uplink Transmit Power Estimation 4G/5G Networks"</a>.
+        New paper available: <a href="#">"Deep Learning-Based Uplink Transmit Power Estimation in 4G/5G Networks"</a>.
       </span>
     </li>
 
@@ -319,7 +321,7 @@
         <span class="update-badge badge-news">News</span>
       </div>
       <span class="update-text">
-        I have began my final-year internship at Orange Research in Châtillon, France.
+        I have begun my final-year internship at Orange Research in Châtillon, France.
       </span>
     </li>
 
@@ -370,14 +372,10 @@
   <li class="pub-item" data-type="preprint">
     <div class="pub-title">Hybrid Models for Predicting Cellular QoS Using Physics-Informed Machine Learning: From Simulations to Field Measurements</div>
     <div class="pub-authors"><strong>Á. Ribas</strong>, M.K. Karray</div>
-    <div class="pub-venue">Submitted on October 2026</div>
-    <div class="pub-links">
-      <a href="https://doi.org/10.5281/zenodo.20137680" class="pub-link">DOI</a>
-      <a href="https://zenodo.org/records/20137679/files/RIBAS_Alvaro_JS26_URSI_paper.pdf?download=1" class="pub-link">PDF</a>
-    </div>
+    <div class="pub-venue">Submitted in October 2026</div>
     <div class="pub-tldr">
       <span class="pub-tldr-label">TL;DR</span>
-      Models that can predict relevant QoS KPIs in simulated and operational networks without needing direct field measurements, using only traffic and locations at input.
+      Models that can predict relevant QoS KPIs in simulated and operational networks without needing direct field measurements, using only traffic and locations as input.
     </div>
   </li>
 
@@ -425,15 +423,15 @@
     <p class="other-card-summary">I was a member of Team Unicamp and Team Brazil from 2021 to 2023, and still watch the tournament every year.</p>
     <div class="other-card-body">
       <p>
-        The IPT is the largest annual competition in experimental physics for undergradute and graduate students in the world.
-        Every year, teams of six students work on solutions of 17 open problems proposed by the organization, that can range from
+        The IPT is the largest annual competition in experimental physics for undergraduate and graduate students in the world.
+        Every year, teams of six students work on solutions to 17 open problems proposed by the organisation, which can range from
         simple experiments to complex new phenomena. The best teams from each university compete in the regionals, and the winners 
         represent their country on the international stage, at the famous 'physics fights'.
       </p>
       <p>
-        Each 'physics fight' includes three teams at a time, for the roles of report, opposition and moderation. The reporter has 10 minutes to 
+        Each 'physics fight' includes three teams at a time, for the roles of reporting, opposition and moderation. The reporter has 10 minutes to 
         present its complete solution to the selected problem: formulation, theory, experiments, validation and conclusions. The role of the 
-        opposition is then to ask questions about the solution and point out its strenghts and weaknesses. Once both teams have presented, they begin 
+        opposition is then to ask questions about the solution and point out its strengths and weaknesses. Once both teams have presented, they begin 
         to debate the most relevant points, while being moderated by a third team, which should lead them to debate important topics and answer the 
         problem statement. 
       </p>
@@ -453,16 +451,16 @@
       <h3>🎾︎ Tennis</h3>
       <span class="other-card-arrow">▸</span>
     </div>
-    <p class="other-card-summary">I'm an avid tennis player since I was 12. I grew up on clay!</p>
+    <p class="other-card-summary">I've been an avid tennis player since I was 12. I grew up on clay!</p>
     <div class="other-card-body">
       <p>
         Here are some photos from nice tennis moments I have experienced over the years. 
-        My ultimate goal as a fan is to attend all 4 grand slams.
+        My ultimate goal as a fan is to attend all 4 Grand Slams.
       </p>
       <div class="other-card-photos">
         <figure>
           <img src="images/IMG_0058.jpeg" alt="Tennis photo 1" />
-          <figcaption>Court Phillippe-Chatrier, the main court for Roland Garros, during a visit (2024)</figcaption>
+          <figcaption>Court Philippe-Chatrier, the main court for Roland Garros, during a visit (2024)</figcaption>
         </figure>
         <figure>
           <img src="images/IMG_0484.jpeg" alt="Tennis photo 2" />
@@ -470,8 +468,8 @@
         </figure>
       </div>
       <p>
-        My favorite player was <a href="https://dominicthiem.com/en/">Dominic Thiem</a>.
-        To this day, I play with an <a href="https://www.youtube.com/watch?v=BuTcMTLV4lk">one-handed backhand</a> and argue many more players should still adopt it.
+        My favourite player was <a href="https://dominicthiem.com/en/">Dominic Thiem</a>.
+        To this day, I play with a <a href="https://www.youtube.com/watch?v=BuTcMTLV4lk">one-handed backhand</a> and argue many more players should still adopt it.
       </p>
     </div>
   </div>
@@ -484,17 +482,17 @@
     <p class="other-card-summary">I'm Brazilian and very proudly so. I like to talk about my country whenever I have the chance.</p>
     <div class="other-card-body">
       <p>
-        I grew up in the state of <a href="https://en.wikipedia.org/wiki/Minas_Gerais">Minas Gerais</a>, known for its rich architecture, culinary,
-        and friendly people. We are particularly recognised by our traditional <a href="https://www.oliviascuisine.com/authentic-brazilian-cheese-bread/">pão de queijo</a>,
-        our coffee, and our cheese — <a href="https://en.wikipedia.org/wiki/Canastra_cheese">canastra</a> is my favorite!
+        I grew up in the state of <a href="https://en.wikipedia.org/wiki/Minas_Gerais">Minas Gerais</a>, known for its rich architecture, cuisine,
+        and friendly people. We are particularly recognised for our traditional <a href="https://www.oliviascuisine.com/authentic-brazilian-cheese-bread/">pão de queijo</a>,
+        our coffee, and our cheese — <a href="https://en.wikipedia.org/wiki/Canastra_cheese">canastra</a> is my favourite!
       </p>
       <p>
         The music from Minas is also a gentle reminder of home that I listen to daily. I'm personally fond of 
         <a href="https://www.youtube.com/watch?v=v43du81eZHw&list=RDv43du81eZHw&start_radio=1">Milton Nascimento</a> and
-        <a href="https://www.youtube.com/watch?v=9tmJUpTQV4E&list=RD9tmJUpTQV4E&start_radio=1">Lagum</a>. Other of my national favorites include 
+        <a href="https://www.youtube.com/watch?v=9tmJUpTQV4E&list=RD9tmJUpTQV4E&start_radio=1">Lagum</a>. Other national favourites of mine include 
         <a href="https://www.youtube.com/watch?v=nRLUH8Rd24g&list=RDnRLUH8Rd24g&start_radio=1">Emicida</a>, 
         <a href="https://www.youtube.com/watch?v=AeM0mc1mvAs&list=RDAeM0mc1mvAs&start_radio=1">Rashid</a> and
-        <a href="https://www.youtube.com/watch?v=rXTqbIJx1UQ&list=RDrXTqbIJx1UQ&start_radio=1">Clarice Falcão</a>.
+        <a href="https://www.youtube.com/watch?v=c6-SNnc9Fzc&list=RDc6-SNnc9Fzc&start_radio=1">Rita Lee</a>.
       </p>
       <div class="other-card-photo-single">
         <figure>
